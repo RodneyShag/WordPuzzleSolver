@@ -1,4 +1,4 @@
-# WordPuzzleSolver
+## WordPuzzleSolver
 Solves word puzzles using backtracking search.<br/><br/>
 
 In this problem, you are asked to solve word puzzles using backtracking search. In these puzzles, you have to fill in an array with letters such that certain subsets of the letters form words from a given category. An example of a word puzzle with one possible solution is given below.
