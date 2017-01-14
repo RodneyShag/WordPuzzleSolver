@@ -1,0 +1,103 @@
+
+<!-- saved from url=(0055)http://slazebni.cs.illinois.edu/fall15/assignment2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CS440 Assignment 2</title>
+<style type="text/css"></style></head>
+<body bgcolor="white">
+
+<table width="800">
+<tbody><tr>
+<td>
+
+
+<table border="0">
+<tbody><tr>
+<td>
+<img src="./documentation_files/got.jpg" width="300">
+</td><td width="20">
+</td><td>
+<h2>CS440 Fall 2015</h2> 
+<h2>Assignment 2: Constraint Satisfaction Problems and Games</h2>
+<h3>Deadline: October 26, 11:59:59PM</h3>
+</td></tr></tbody></table>
+
+<p><b>As on Assignment 1, you have the option of working in groups of up to three people.</b> You are free
+to either stay with the same team or pick a new one, but as before, three-unit students must work with
+three-unit students and four-unit students must work with four-unit students. For more detail, see
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2.html#submission"><b>submission instructions</b></a>.
+
+
+</p><h2>Contents</h2>
+
+<ul>
+<li>Part 1: <a href="http://slazebni.cs.illinois.edu/fall15/assignment2.html#csp">Constraint satisfaction problems</a>
+</li><li>1.1 <a href="http://slazebni.cs.illinois.edu/fall15/assignment2.html#scheduling">Word puzzles</a> (for everybody)
+</li><li><a href="http://slazebni.cs.illinois.edu/fall15/assignment2.html#checklist">Report checklist</a>
+</li><li><a href="http://slazebni.cs.illinois.edu/fall15/assignment2.html#submission">Submission instructions</a>
+</li></ul>
+
+<a name="csp">
+<h2>Part 1: Constraint Satisfaction Problems</h2>
+
+</a><a name="scheduling">
+<h3>1.1 Word Puzzles (for everybody)</h3>
+<small>Adapted by Qieyun Dai from </small></a><small><a href="http://web.mit.edu/pasin/www/wordgame/">Dana Moshkovitz and Pasin Manurangsi</a></small>
+
+<p>
+In this problem, you are asked to solve word puzzles using backtracking search.
+In these puzzles, you have to fill in an array with letters such that certain subsets of the letters form words from a given category.
+An example of a word puzzle with one possible solution is given below.<br><br>
+
+<img src="./documentation_files/example.jpg" height="200"> <img src="./documentation_files/solution.png" height="200"> <br><br>
+
+In this example, the letters connected to red lines should form a word from the "furniture" category and similarly, 
+the letters connected to the green lines should form a word belonging to the "clothing" category.
+All the words have a length of 3 and the list of candidate words for each category is given in <a href="http://slazebni.cs.illinois.edu/fall15/assignment2/wordlist.txt">this word list</a>
+(you can also find a zip file <a href="http://slazebni.cs.illinois.edu/fall15/assignment2/wordlist.zip">here</a> where each txt file corresponds to one category, 
+and the words for this category are listed one per line).
+
+</p><p>Your goal is to implement backtracking search to find <b>all solutions</b> to the following instances (each puzzle may have multiple solutions):</p>
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/puzzle1.txt">puzzle 1</a><p></p>
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/puzzle2.txt">puzzle 2</a><p></p>
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/puzzle3.txt">puzzle 3</a><p></p>
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/puzzle4.txt">puzzle 4</a><p></p>
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/puzzle5.txt">puzzle 5</a><p></p>
+In each input file, the first line specifies the size of the result array, and the rest of the file lists the category names 
+and indices of the result array that correspond to the word of that category. <p></p>
+You should implement two verisons of backtracking search for two different formulations:<p></p>
+(a) <b>letter-based assignment</b> where you fill in the array one letter at a time; <p></p>
+(b) <b>word-based assignment</b> where you fill in the array one word at a time.<p></p>
+In your report, please include the following:<p></p>
+(1) For each formulation, specify the <b>variables</b>, <b>domains</b> and <b>constraints</b>. Briefly discuss what kind of constraint checking/inference you have implemented (if any) to make the search more efficient.<p></p>
+(2) For each example, list <b>all possible solutions</b> (there may be more than one).<p></p>
+(3) For each example and each formulation, show your search trace.
+(Note that if you do a consistency check before each attempted assignment, the search space shouldn't be too large.)
+Here is an example <a href="http://slazebni.cs.illinois.edu/fall15/assignment2/letter.txt">letter-based trace</a> and 
+<a href="http://slazebni.cs.illinois.edu/fall15/assignment2/word.txt">word-based trace</a>.
+In the first line of the trace file, indicate your assignment order (you're free to choose whatever order you like).
+List one search path per line. The path is terminated either when a solution is found (please list the found solution) 
+or no valid assignment exists and the search needs to backtrack.<p></p>
+
+</p>
+
+</a>
+
+<h4>Part 1:</h4>
+<ol class="ol1">
+<li class="li1"> For everybody: (1) Briefly discuss your implementation for search formulations (a) and (b). (2) List all possible solutions for each of five examples. (3) For each formulation and each example, give your search trace. 
+</li><li> For four-unit students: For a range of map sizes (N), report average number of edges vs. N; average number of assignments and running time for search variants (a) and (b) (w/o forward checking and with forward checking and other heuristics). For variant (b), briefly discuss what heuristics you used.
+</li></ol>
+
+<h4>Extra credit:</h4>
+
+<ul><li>
+We reserve the right to give <b>bonus points</b> for any advanced
+exploration or especially challenging or creative solutions that you implement.
+Three-unit students always get extra credit for submitting solutions to four-unit problems.
+<b><font color="red">If you submit any work for bonus points, be sure it is clearly indicated in your report.</font></b></li></ul>
+
+</p></td></tr></tbody></table>
+
+
+
+</body></html>

@@ -1,0 +1,8 @@
+BUS
+CAB
+CAR
+JET
+SKI
+SST
+SUV
+VAN

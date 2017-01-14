@@ -1,0 +1,6 @@
+BAG
+BIN
+BOX
+CAN
+CUP
+TIN
